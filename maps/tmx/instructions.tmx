@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="2020.01.22" orientation="orthogonal" renderorder="right-down" compressionlevel="-1" width="37" height="17" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="instructions2" tilewidth="16" tileheight="16" tilecount="629" columns="37">
+  <image source="../graphics/instructions2.png" width="592" height="272"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="37" height="17">
+  <data encoding="base64" compression="zlib">
+   eJyt011OwkAUhuEZllAl4cL/nzVUm7gAvAVEtNDELagLQEncCdLoTkDXQsIG+CYZMqeTtnPgcPGEG9K8OZMvUUole5IRkXUAh9CEIziGEziFMziHC7iEK7j2viM1IWIrCqDNbbj3viOVE6kVB5S15Xv0T4ytNGDTRZtCt+Xe3XSsiKm1afP/Xyd0W87d61qrWuq2Erpt6O6cVtpUtlHfWIDbWtVXtZWpALd1243NBbitZW3+PqilALfVbyu7F91sU++O20rbqnbY0k4iwG2lbebtbuBWFfd/p51MgNtK28zbDWGkivt/0c5EgNtK28z7fcCnKu7/Szu5ALeVtpn3+4aZt/9f7fzY305DqS704AH68AgDeIJnSGEII8ga/FbaZt5vAX/e/l/xvTd4hzU6EvwK
+  </data>
+ </layer>
+</map>

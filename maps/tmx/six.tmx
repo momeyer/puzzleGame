@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="2020.01.22" orientation="orthogonal" renderorder="right-down" compressionlevel="-1" width="39" height="17" tilewidth="16" tileheight="16" infinite="0" nextlayerid="87" nextobjectid="76">
+ <editorsettings>
+  <export target="6.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" name="functionsTextTiles" tilewidth="16" tileheight="16" tilecount="900" columns="30">
+  <image source="../graphics/functionsTextTiles.png" width="480" height="480"/>
+ </tileset>
+ <tileset firstgid="901" name="test" tilewidth="16" tileheight="16" tilecount="486" columns="27">
+  <image source="../tileset/Tilemap/test.png" width="432" height="288"/>
+ </tileset>
+ <tileset firstgid="1387" name="UIpackSheet_transparent" tilewidth="16" tileheight="16" spacing="2" tilecount="990" columns="30">
+  <image source="../tileset/Tilemap/UIpackSheet_transparent.png" width="538" height="592"/>
+ </tileset>
+ <layer id="14" name="info" width="39" height="17">
+  <properties>
+   <property name="F0" type="int" value="3"/>
+   <property name="blueTile" type="bool" value="true"/>
+   <property name="door" type="bool" value="false"/>
+   <property name="face" value="right"/>
+   <property name="fruit" type="bool" value="true"/>
+   <property name="fruitsTotal" type="int" value="20"/>
+   <property name="grass" type="bool" value="true"/>
+   <property name="greyTile" type="bool" value="false"/>
+   <property name="numFunc" type="int" value="1"/>
+   <property name="totalSize" type="int" value="3"/>
+   <property name="yellowTile" type="bool" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20JT6AAAOBjClwAAQ==
+  </data>
+ </layer>
+ <layer id="1" name="background" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxbyczAsJIEvAqNv5CGmBR3jbptaLjtCIn46CAON3Q86rbB57Y+EnE/Hd2GntYnA/EkLOIwuYEsQ1ZgsR+EQQCb3KjbRt1GDbfBwGBz21pm7OXHukHgNnxlLT3dBgC+EazR
+  </data>
+ </layer>
+ <layer id="3" name="path" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoIgwxWTDxYAMgtWayo9GABGWjuGmxuG+zhNhjT2yjADwBDBAqw
+  </data>
+ </layer>
+ <layer id="8" name="houses" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzbwMzAsAkNbwBiGJBlYWCQA2J5IDZnYaArOA10x1k0DBJjZmVgYAFiC6B7LIHYCoiD6Oy2Z0B3vEDDz5DCLRjonhAgDqWzu0bBKBgFo4BScA9Ylt0H4gfMhNXSG/wEuukXEP8ehG4TAZb3okAsNgjL/enMEDxjEIYbrO2xGYgZWQfaNagA1vY4NwjDDdltgy3cAOsmICE=
+  </data>
+ </layer>
+ <layer id="4" name="fruits" width="39" height="17" visible="0" offsetx="16.3333" offsety="-3.16667">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMArwA15mBoZ0ZlR6sIB0Zuz0YACw8AKB0XAjHgzm9DYKCAMAG5AFeQ==
+  </data>
+ </layer>
+ <layer id="7" name="streets" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAdBLEyMAQDcQgrGZppDEbdRh4YzG4zB7rJAogtaew2aVbSsBQQR9Ap3MxYScOmUFqGDm4LZCUNBwCx7Wh6IwsM5nw66jbywKjbyAOjbiMP0MttAINDGX8=
+  </data>
+ </layer>
+ <layer id="11" name="cars" width="39" height="17" offsetx="-8.5" offsety="6">
+  <data encoding="base64" compression="zlib">
+   eJxjYBh+wI11oF2AGyQOYrfRA/AB/c8/SMNAE+guLRxucwGKu0LlvIC09yDyQzzQLQmDyD3DBYgO4jA1GMRuGwWjgF5AeBDnA71B7DZ6AADWfwPL
+  </data>
+ </layer>
+ <layer id="9" name="details" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJy7wsKAAa5gEcMnTisAsu8akp0gNrIbVFkReN4AuI0XaK8iECuxQtjIbmsBshexQGgYkGdlaKCvK4kHLiyD122jgDSgPYjj0g3NbXKsA+QQIoALjcuUPDqXWaSAJUC3MQ3SuHk+iMNtFIyCUQABAKOOEEA=
+  </data>
+ </layer>
+ <layer id="10" name="details2" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAMrGem0AAiwBUWCMYHLmKRp4fb0MFMqDvOAulzQHweh7sHwm3EglG3kQdG3UYeoKXbZhAoNwiBkRpuIGBPQdiN5HCjBIy6jTww6jbyAC3dBgByDxJK
+  </data>
+ </layer>
+ <layer id="12" name="people" width="39" height="17" offsetx="0.5" offsety="-7">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxH8ZiFOnS8rbd0xCkbBUAQcROafUTAKRsEoGAWYAABzGAFe
+  </data>
+ </layer>
+ <layer id="6" name="player" width="39" height="17" visible="0" offsetx="0" offsety="-7">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAa3BfOaBdsEoGAX0AQDjwACj
+  </data>
+ </layer>
+ <layer id="16" name="buttons" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzt08cNAjEQRuHR7sGwSxukbYPYBrENYgGwhQB9ENsg1sBD5mRx4OY5+Je++5PGFgkLCwv7vZURWTty47vKbkPH1rFT0laORdqOLPZdZbePRA444oQzLpHvKrsrHTfc8cATLyVthvsVUESCFCUlN/28twqqqKGu6L016Gii9f0HHXSVtPXo6GOAIUYYK2mb0DHFDHMssFTS9s/ei+EcOw==
+  </data>
+ </layer>
+ <layer id="39" name="fruit1" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYXICXeaBdMArIBQAmGQAR
+  </data>
+ </layer>
+ <layer id="40" name="fruit2" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYfCCdeaBdMArIAQDAiQBr
+  </data>
+ </layer>
+ <layer id="41" name="fruit3" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYnICXeaBdMApIBQAlmQAR
+  </data>
+ </layer>
+ <layer id="42" name="fruit4" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYvCCdeaBdMApIAQC9OQBr
+  </data>
+ </layer>
+ <layer id="43" name="fruit5" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgY3ICXeaBdMAqIBQAlGQAR
+  </data>
+ </layer>
+ <layer id="44" name="fruit6" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwShgYEhnHmgXjILhAAD8KQBr
+  </data>
+ </layer>
+ <layer id="45" name="fruit7" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUgG6cwD7YJRMJwAAP95AGs=
+  </data>
+ </layer>
+ <layer id="46" name="fruit8" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUgE6cwD7YJRMBwBAALYAGs=
+  </data>
+ </layer>
+ <layer id="47" name="fruit9" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAa0AL/NAu2AUjAL6AgA5mQAR
+  </data>
+ </layer>
+ <layer id="48" name="fruit10" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAS1BOvNAu2AUjAL6AQBByABr
+  </data>
+ </layer>
+ <layer id="49" name="fruit11" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAT1AOvNAu2AUjALaAwA+eABr
+  </data>
+ </layer>
+ <layer id="50" name="fruit12" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAb0AL/NAu2AUjALaAgA4mQAR
+  </data>
+ </layer>
+ <layer id="51" name="fruit13" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGF0hnHmgXjIJRMHIBAH1oAGs=
+  </data>
+ </layer>
+ <layer id="52" name="fruit14" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGB+BlHmgXjIJRMAoAQtkAEQ==
+  </data>
+ </layer>
+ <layer id="53" name="fruit15" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGNkhnHmgXjIJRMApgAACECABr
+  </data>
+ </layer>
+ <layer id="54" name="fruit16" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoIg3TmgXbBKBgFo2AoAADEoABr
+  </data>
+ </layer>
+ <layer id="55" name="fruit17" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqIA7zMA+2CUTAKRsFgBwBM2QAR
+  </data>
+ </layer>
+ <layer id="56" name="fruit18" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqIB+nMA+2CUTAKRsFgBgDBUABr
+  </data>
+ </layer>
+ <layer id="57" name="fruit19" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApIA7zMA+2CUTAKRsFgBQBMWQAR
+  </data>
+ </layer>
+ <layer id="58" name="fruit20" width="39" height="17" offsetx="0.5625" offsety="-2.625">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApIB+nMA+2CUTAKRsFgBAC+AABr
+  </data>
+ </layer>
+ <layer id="59" name="apple1" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMFIAL/NAu2AUjIJRMNwBAFDZABE=
+  </data>
+ </layer>
+ <layer id="60" name="apple2" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMJIAL/NAu2AUjIJRMJwBAFCZABE=
+  </data>
+ </layer>
+ <layer id="61" name="apple3" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNIAL/NAu2AUjIJRMFwBAFBZABE=
+  </data>
+ </layer>
+ <layer id="62" name="apple4" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMBIBL/NAu2AUjIJRMBwBAFAZABE=
+  </data>
+ </layer>
+ <layer id="63" name="apple5" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMFIBL/NAu2AUjIJRMNwAAE/ZABE=
+  </data>
+ </layer>
+ <layer id="64" name="apple6" width="39" height="17" offsetx="-0.5" offsety="-3.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMJIBL/NAu2AUjIJRMJwAAE+ZABE=
+  </data>
+ </layer>
+ <layer id="65" name="apple7" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQE3AyzzQLhgFo2AUjIKBAwBamQAR
+  </data>
+ </layer>
+ <layer id="66" name="apple8" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQG3AyzzQLhgFo2AUjIKBAQBaWQAR
+  </data>
+ </layer>
+ <layer id="67" name="apple9" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQAvAyzzQLhgFo2AUjAL6AwBaGQAR
+  </data>
+ </layer>
+ <layer id="68" name="apple10" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQCvAyzzQLhgFo2AUjAL6AgBZ2QAR
+  </data>
+ </layer>
+ <layer id="69" name="apple11" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQEvAyzzQLhgFo2AUjAL6AQBZmQAR
+  </data>
+ </layer>
+ <layer id="70" name="apple12" width="39" height="17" offsetx="0.75" offsety="-2">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQGvAyzzQLhgFo2AUjAL6AABZWQAR
+  </data>
+ </layer>
+ <layer id="71" name="apple13" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhB3iZB9oFo2AUjIJRMAqwAQBkWQAR
+  </data>
+ </layer>
+ <layer id="72" name="apple14" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhCXiZB9oFo2AUjIJRMArQAQBkGQAR
+  </data>
+ </layer>
+ <layer id="73" name="apple15" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhC3iZB9oFo2AUjIJRMAqQAQBj2QAR
+  </data>
+ </layer>
+ <layer id="74" name="apple16" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhDXiZB9oFo2AUjIJRMApgAABjmQAR
+  </data>
+ </layer>
+ <layer id="83" name="buttonsSecondRow" width="39" height="17">
+  <properties>
+   <property name="blue" value="blueTile"/>
+   <property name="yellow" value="yellowTile"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20JT6AAAOBjClwAAQ==
+  </data>
+ </layer>
+ <layer id="84" name="buttonsThirdRow" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20JT6AAAOBjClwAAQ==
+  </data>
+ </layer>
+ <layer id="75" name="apple17" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhD3iZB9oFo2AUjIJRMApAAABjWQAR
+  </data>
+ </layer>
+ <layer id="76" name="apple18" width="39" height="17" offsetx="1" offsety="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhAXiZB9oFo2AUjIJRMAoAYxkAEQ==
+  </data>
+ </layer>
+ <layer id="77" name="apple19" width="39" height="17" offsetx="1.5" offsety="2.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAL8gJd5oF0wCkbBKBgFo2CoAABtmQAR
+  </data>
+ </layer>
+ <layer id="78" name="apple20" width="39" height="17" offsetx="1.5" offsety="2.25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALCgJd5oF0wCkbBKBgFo2AoAABtWQAR
+  </data>
+ </layer>
+ <layer id="79" name="text" width="39" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzt0MkNgDAMBVGHAA1QCXTFFtYOoEbqYRAnbtwcRR7pST5+WST9WifSoceAEQETZixYsWF32mvj6XlFBo8cle6cT4X2gB9dPK/meY1/7xgqtQdYVmQdOLVHWFZi3WB2CIM=
+  </data>
+ </layer>
+ <objectgroup id="81" name="grass" visible="0">
+  <properties>
+   <property name="numObjects" type="int" value="4"/>
+  </properties>
+  <object id="31" name="grass1" x="0" y="248.75" width="304" height="23.25"/>
+  <object id="33" name="grass2" x="0" y="0" width="86.1667" height="272"/>
+  <object id="34" name="grass3" x="4.66667" y="1" width="304" height="150.75"/>
+  <object id="35" name="grass4" x="183.667" y="0" width="120.333" height="272"/>
+ </objectgroup>
+ <objectgroup id="82" name="blueTile" visible="0">
+  <properties>
+   <property name="numObjects" type="int" value="5"/>
+  </properties>
+  <object id="36" name="blueTile1" x="120.125" y="183" width="0.25" height="0.25"/>
+  <object id="38" name="blueTile2" x="151.636" y="182.727" width="0.363636" height="0.363636"/>
+  <object id="39" name="blueTile3" x="135.909" y="199.091" width="0.363636" height="0.3"/>
+  <object id="40" name="blueTile4" x="119.455" y="215.455" width="0.272727" height="0.0909091"/>
+  <object id="41" name="blueTile5" x="152.182" y="215.182" width="0.181818" height="0.363636"/>
+ </objectgroup>
+ <objectgroup id="13" name="player" visible="0">
+  <object id="42" name="player" x="128" y="192" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="17" name="fruit" visible="0">
+  <properties>
+   <property name="numObjects" type="int" value="20"/>
+  </properties>
+  <object id="2" name="fruit1" x="103.091" y="231.636" width="0.3" height="0.3"/>
+  <object id="3" name="fruit2" x="119.818" y="231.818" width="0.3" height="0.3"/>
+  <object id="4" name="fruit3" x="135.818" y="231.374" width="0.3" height="0.3"/>
+  <object id="5" name="fruit4" x="151.636" y="231.455" width="0.3" height="0.3"/>
+  <object id="7" name="fruit5" x="167.818" y="230.727" width="0.3" height="0.3"/>
+  <object id="8" name="fruit6" x="167.636" y="215.818" width="0.3" height="0.3"/>
+  <object id="9" name="fruit7" x="136" y="215.636" width="0.3" height="0.3"/>
+  <object id="10" name="fruit8" x="104.182" y="215.273" width="0.3" height="0.3"/>
+  <object id="11" name="fruit9" x="103.818" y="199.455" width="0.545455" height="0.363636"/>
+  <object id="12" name="fruit10" x="119.818" y="199.273" width="0.27" height="0.3"/>
+  <object id="13" name="fruit11" x="151.455" y="198.909" width="0.3" height="0.3"/>
+  <object id="14" name="fruit12" x="167.818" y="199.455" width="0.3" height="0.3"/>
+  <object id="15" name="fruit13" x="168" y="183.818" width="0.181818" height="0.181818"/>
+  <object id="16" name="fruit14" x="135.455" y="183.273" width="0.545455" height="0.26087"/>
+  <object id="18" name="fruit15" x="103.818" y="183.091" width="0.363636" height="0.545455"/>
+  <object id="19" name="fruit16" x="103.818" y="167.091" width="0.3" height="0.3"/>
+  <object id="20" name="fruit17" x="119.636" y="167.091" width="0.545455" height="0.363636"/>
+  <object id="22" name="fruit18" x="135.455" y="167.091" width="0.181818" height="0.181818"/>
+  <object id="24" name="fruit19" x="151.455" y="167.091" width="0.363636" height="0.181818"/>
+  <object id="25" name="fruit20" x="168" y="167.091" width="0.363636" height="0.545455"/>
+ </objectgroup>
+ <objectgroup id="85" name="yellowTile" visible="0">
+  <properties>
+   <property name="numObjects" type="int" value="20"/>
+  </properties>
+  <object id="43" name="yellowTile1" x="103.455" y="231.636" width="0.3" height="0.3"/>
+  <object id="44" name="yellowTile2" x="119.636" y="231.455" width="0.3" height="0.3"/>
+  <object id="47" name="yellowTile3" x="135.909" y="231.909" width="0.3" height="0.3"/>
+  <object id="48" name="yellowTile4" x="153" y="231.455" width="0.3" height="0.3"/>
+  <object id="49" name="yellowTile5" x="167.818" y="231.273" width="0.3" height="0.3"/>
+  <object id="50" name="yellowTile6" x="103.636" y="215.273" width="0.3" height="0.3"/>
+  <object id="51" name="yellowTile7" x="135.455" y="215.455" width="0.3" height="0.3"/>
+  <object id="52" name="yellowTile8" x="170.545" y="215.455" width="0.3" height="0.3"/>
+  <object id="54" name="yellowTile9" x="103.091" y="198.727" width="0.3" height="0.3"/>
+  <object id="55" name="yellowTile10" x="120" y="198.727" width="0.3" height="0.3"/>
+  <object id="61" name="yellowTile11" x="151.818" y="198.727" width="0.3" height="0.3"/>
+  <object id="62" name="yellowTile20" x="168.727" y="166.182" width="0.3" height="0.3"/>
+  <object id="63" name="yellowTile12" x="168.182" y="199.636" width="0.3" height="0.3"/>
+  <object id="64" name="yellowTile13" x="104.545" y="183.273" width="0.3" height="0.3"/>
+  <object id="65" name="yellowTile14" x="136" y="183.455" width="0.3" height="0.3"/>
+  <object id="70" name="yellowTile15" x="169.455" y="183.455" width="0.3" height="0.3"/>
+  <object id="71" name="yellowTile16" x="105.455" y="166.364" width="0.3" height="0.3"/>
+  <object id="72" name="yellowTile17" x="118.909" y="167.455" width="0.3" height="0.3"/>
+  <object id="73" name="yellowTile18" x="136.727" y="167.273" width="0.3" height="0.3"/>
+  <object id="75" name="yellowTile19" x="152" y="166.909" width="0.3" height="0.3"/>
+ </objectgroup>
+ <objectgroup id="80" name="answer" visible="0">
+  <properties>
+   <property name="numObjects" type="int" value="3"/>
+  </properties>
+  <object id="27" name="answer1" x="320" y="80" width="16" height="16"/>
+  <object id="28" name="answer2" x="344.063" y="79.9375" width="16" height="16"/>
+  <object id="29" name="answer3" x="367.989" y="80.0056" width="16" height="16"/>
+ </objectgroup>
+</map>
