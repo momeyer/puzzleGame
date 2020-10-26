@@ -15,6 +15,7 @@
  <layer id="23" name="info" width="39" height="17">
   <properties>
    <property name="F0" type="int" value="2"/>
+   <property name="F1" type="int" value="0"/>
    <property name="blueTile" type="bool" value="false"/>
    <property name="door" type="bool" value="true"/>
    <property name="face" value="up"/>
@@ -88,7 +89,7 @@
   </properties>
   <object id="112" name="fruit1" x="168" y="102.25" width="0.25" height="0.5"/>
  </objectgroup>
- <layer id="32" name="fruit1" width="39" height="17" visible="0" offsetx="0.75" offsety="-4.25">
+ <layer id="32" name="fruit1" width="39" height="17" offsetx="0.75" offsety="-4.25">
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AUDBfwmWWgXTAKRsEoGAWjYKQDAFvGAPg=
   </data>

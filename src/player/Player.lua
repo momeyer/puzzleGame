@@ -82,10 +82,10 @@ end
 function Player:move(action)
     if action == FACE_LEFT then
         self:turnLeft()
-        self.isMoving = false
+        self:stop()
     elseif action == FACE_RIGHT then
         self:turnRight()
-        self.isMoving = false
+        self:stop()
     elseif action == WALK then
         self:walk()
         love.timer.sleep(0.1)
@@ -94,7 +94,7 @@ function Player:move(action)
     elseif action == PAINT_GREY then
         self:paintTiles(action)
     elseif action == nil then
-        self.isMoving = false
+        self:stop()
     end
     self:collectFruits()
     self:checkIfCollide()
@@ -120,15 +120,13 @@ function Player:collectFruits()
     local collider = self:getFirstCollider(FRUIT)
     if collider then
         self.map.layers[collider.name].visible = false
-        self.map.layers['apple' .. self.game.stages.fruitsTotal].visible = false
-        self.game.stages.fruitsTotal = self.game.stages.fruitsTotal - 1
+        self.map.layers['apple' .. self.game:getFruit()].visible = false
         collider.collected = true
         collider:destroy()
     end
 
-    if not self.endPoint and (self.game.stages.fruitsTotal == 0) then
-        self.game.stages.endGame = true
-        self.isMoving = false
+    if not self.endPoint and self.game:collectedAllFruits() then
+        self.game:endGame()
     end
 end
 
@@ -156,6 +154,10 @@ function Player:checkIfCollide()
     elseif grass then
         self.game:fail(self)
     end
+end
+
+function Player:stop()
+    self.isMoving = false
 end
 
 function Player:update(dt)

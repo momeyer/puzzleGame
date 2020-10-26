@@ -214,7 +214,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJxjYBgYsIidMKa3O0h1H73dSqzb6GUnKW5C1vOdFdN8HxZMsYesqDSt/EFKuGFzOwh8I8ONtEpflIbbQKZ9QmbSwm3kxB293AYDuNIdLdw1EGUvuW6jVtzRwm30AAOVF6hRFwxkuJHi3sHgBmLdRs+wJOQ2AOmskMw="
+      data = "eJxjYBgYsIidMKa3O0h1H0wPvdxKrNvoZScpbkLW850V03wfFkyxh6yoNK38QUq4YXM7CHwjw43EhhmpcUppuJHiLmqnN0Jm0sJt5MQdvdwGA7jSHS3cNRBlL7luo1bc0cJt9AADlReoURcMZLiR4t7B4AZi3UbPsCTkNgDl3ZAj"
     },
     {
       type = "tilelayer",

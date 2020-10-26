@@ -4,15 +4,17 @@ local windfield = require("libs/windfield")
     
 require "src/utils/Util"
 
-function Level:init(mapToRender)
+function Level:init(mapToRender, game)
     self.map = sti(mapToRender)
     self.world = windfield.newWorld()
     self.world:setQueryDebugDrawing(true)
     self.mapProperties = self.map.layers.info.properties
-    self.game = Game(self.mapProperties)
+    self.game = game
+    self.game:setTotalFruits(self.mapProperties.fruitsTotal)
+
     self.tiles = Tiles(self.map, self.world, self.game)
+
     self.functionsToUse = {F0, F1}
-    
     self.functions = {
         F0 = {},
         F1 = {}
@@ -39,15 +41,23 @@ function Level:setUpFunctions()
 end
 
 function Level:reset()
-    for i = 1, #self.functionsToUse do
-        self.curFunctionAndIndex[i] = 1
-    end
+
+    self.curFunctionAndIndex = {
+        F0 = 1,
+        F1 = 1
+    }
+
+
+    self.functions = {
+        F0 = {},
+        F1 = {}
+    }
 
     self:setUpFunctions()
+
     self.nextInstruction = {F0, 1}
     
     self.buttons = Buttons(self)
-    self:setUpFunctions()
     self.answer = Answer(self.mapProperties, self.map)
 end
 
@@ -57,17 +67,17 @@ function Level:update(dt)
     self:executeInstruction(dt)
     
     if self.mapProperties.door then
-        self.tiles.door:update(dt, self.game.stages.endGame)
+        self.tiles.door:update(dt, self.game:isFinished())
     end
 end
 
 function Level:canExecuteInstruction()
-    return self.game.stages.start and not self.game.stages.fail and not self.game.stages.endGame
+    return self.game.stageNew == 6
 end
 
 function Level:isValidInstruction(nextMovement)
     if nextMovement == nil or nextMovement.action == nil then
-        self.game.stages.fail = true
+        self.game:fail(self.tiles.player)
         return false
     end
     return true
@@ -88,7 +98,7 @@ end
 function Level:executeInstruction(dt)
     local nextMovement = self.functions[self.nextInstruction[1]][self.nextInstruction[2]]
 
-    if not self:canExecuteInstruction() or not self:isValidInstruction(nextMovement) then
+    if not self.game:isRunning() or not self:isValidInstruction(nextMovement) then
         return
     end
 
@@ -123,7 +133,7 @@ function Level:insertActionInTable(func, index, command)
     self.answer:setActionImage(command)
 end
 
-function Level:IfCondition(command, conditions)
+function Level:IsCondition(command, conditions)
     return inTable(conditions, command)
 end
 
@@ -140,7 +150,7 @@ function Level:insert(command)
     local curFunction = self:selectCurFunction()
 
     if curFunction then
-        if self:IfCondition(command, listOfConditions) then
+        if self:IsCondition(command, listOfConditions) then
             self:insertCondtitionInTable(curFunction, self.curFunctionAndIndex[curFunction], command)
         else
             self:insertActionInTable(curFunction, self.curFunctionAndIndex[curFunction], command)
@@ -154,7 +164,7 @@ function Level:render()
     self:drawCommands()
 
     self.answer:draw()
-    if self.game.stages.endGame == false then
+    if not self.game:isFinished() then
         self.tiles.player:draw()
     end
     if not self.mapProperties.door then

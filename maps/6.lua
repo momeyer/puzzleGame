@@ -106,6 +106,7 @@ return {
       offsety = 0,
       properties = {
         ["F0"] = 3,
+        ["F1"] = 0,
         ["blueTile"] = true,
         ["door"] = false,
         ["face"] = "right",

@@ -15,6 +15,7 @@
  <layer id="14" name="info" width="39" height="17">
   <properties>
    <property name="F0" type="int" value="3"/>
+   <property name="F1" type="int" value="0"/>
    <property name="blueTile" type="bool" value="true"/>
    <property name="door" type="bool" value="false"/>
    <property name="face" value="right"/>

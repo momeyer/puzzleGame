@@ -1,14 +1,14 @@
 Menu = Class{}
 
-function Menu:init(gameStages)
+function Menu:init(game)
 
-    self.gameStages = gameStages
-    self.gameStages.menu = true
+    self.game = game
+
     self.images = {
-        [MENU] = love.graphics.newImage(MENU_IMAGE),
-        [INSTRUCTION1] = love.graphics.newImage(INSTRUCTION_1_IMAGE),
-        [INSTRUCTION2] = love.graphics.newImage(INSTRUCTION_2_IMAGE),
-        [THE_END] = love.graphics.newImage(THE_END_IMAGE),
+        [Stage.MENU] = love.graphics.newImage(MENU_IMAGE),
+        [Stage.FIRST_INSTRUCTION] = love.graphics.newImage(INSTRUCTION_1_IMAGE),
+        [Stage.SECOND_INSTRUCTION] = love.graphics.newImage(INSTRUCTION_2_IMAGE),
+        [Stage.THE_END] = love.graphics.newImage(THE_END_IMAGE),
     }
 
     self.curImage = MENU
@@ -16,31 +16,26 @@ function Menu:init(gameStages)
     self.playButtonY = 370
     self.instructionButtonY = self.playButtonY + 70
     self.nextButtonY = 540
-    self.buttons = MenuButtons(gameStages, MenuButton(self.playButtonY, PLAY), MenuButton(self.instructionButtonY, INSTRUCTION), MenuButton(self.nextButtonY, NEXT))
+    self.buttons = MenuButtons(self.game, MenuButton(self.playButtonY, PLAY), MenuButton(self.instructionButtonY, INSTRUCTION), MenuButton(self.nextButtonY, NEXT))
 end
 
 function Menu:update(dt)
     self:selectImageToDisplay()
-    if self.gameStages.theEnd then
-        self.curImage = THE_END
-    end
 end
 
 function Menu:selectImageToDisplay()
-    if self.gameStages.instruction ~= nil then
-        self.curImage = self.gameStages.instruction
+    if self.game:isInstruction() or self.game:isTheEnd() then
+        self.curImage = self.game.stageNew
     end
 end
 
 function Menu:draw()
-    if self.gameStages.instruction == nil then
+    if not self.game:isInstruction() then
         love.graphics.draw(self.images[self.curImage], 0, 0)
-        if not self.gameStages.theEnd then
-            self.buttons:render()
-        end
+        self.buttons:render()
     else
         love.graphics.clear(108/255, 140/255, 255/255, 255/255)
-        love.graphics.draw(self.images[self.curImage], 0, 0, 0, 2.2)
+        love.graphics.draw(self.images[self.curImage], 0, 0, 0, 2.25)
         self.buttons:render()
     end
 end

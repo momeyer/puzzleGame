@@ -80,6 +80,7 @@ return {
       offsety = 0,
       properties = {
         ["F0"] = 4,
+        ["F1"] = 0,
         ["blueTile"] = false,
         ["door"] = true,
         ["face"] = "right",

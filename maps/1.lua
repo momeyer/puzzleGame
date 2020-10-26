@@ -106,6 +106,7 @@ return {
       offsety = 0,
       properties = {
         ["F0"] = 2,
+        ["F1"] = 0,
         ["blueTile"] = false,
         ["door"] = true,
         ["face"] = "up",
@@ -384,7 +385,7 @@ return {
       height = 17,
       id = 32,
       name = "fruit1",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0.75,
       offsety = -4.25,
