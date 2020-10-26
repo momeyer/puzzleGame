@@ -126,7 +126,7 @@ function Player:collectFruits()
     end
 
     if not self.endPoint and self.game:collectedAllFruits() then
-        self.game:endGame()
+        self.game:endGame(self)
     end
 end
 
