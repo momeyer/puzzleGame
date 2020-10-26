@@ -8,7 +8,7 @@ love.graphics.setDefaultFilter('nearest', 'nearest')
 function love.load()
     love.physics.setMeter(32)
     love.window.setTitle('Can you help Tonny?')
-    numLevels = 1
+    numLevels = 10
     levels = createLevels(numLevels)
     levelIndex = 1
     game = Game()
@@ -93,7 +93,7 @@ function displayNextLevelMessage()
 end
 
 function love.draw()
-    if game:isMenu() or game:isInstruction() then
+    if game:isMenu() or game:isInstruction() or game:isTheEnd() then
         menu:draw()
     else
         push:apply('start')

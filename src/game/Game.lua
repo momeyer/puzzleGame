@@ -36,7 +36,7 @@ function Game:setPlay()
 end
 
 function Game:isMenu()
-    return (self.stageNew == Stage.MENU or self.stageNew == Stage.THE_END)
+    return (self.stageNew == Stage.MENU)
 end
 
 function Game:setMenuStage()
