@@ -35,7 +35,12 @@ Then just run `love .`
 [Lua](http://www.lua.org/) Language
 [LÖVE2D](https://love2d.org/) framework
 
+# Images
+
+That is how it was in the test:
 ![image1](/images/codam_image.png)
+
+That is my version:
 ![image1](/images/1.png)
 ![image2](/images/2.png)
 ![image3](/images/3.png)
